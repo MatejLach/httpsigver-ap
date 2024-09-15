@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/MatejLach/astreams v0.11.0
-	github.com/MatejLach/httpsignatures-go v0.1.0
+	github.com/MatejLach/httpsignatures-go v0.2.0
 	github.com/stretchr/testify v1.9.0
 )
 
