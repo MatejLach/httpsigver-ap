@@ -1,4 +1,4 @@
-package signature
+package httpsigver
 
 import (
 	"context"

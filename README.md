@@ -6,12 +6,18 @@ as verify the validity of a request's signature originating from an ActivityPub 
 
 ## Usage
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/MatejLach/httpsigver-ap.svg)](https://pkg.go.dev/github.com/MatejLach//httpsigver-ap#section-documentation)
+
 ### Signing requests
 
 ```go
 package main
 
-import "github.com/MatejLach/httpsigver-ap"
+import (
+	//...
+	
+	"github.com/MatejLach/httpsigver-ap"
+)
 
 func main() {
 	// ...
@@ -25,7 +31,7 @@ func main() {
 		// error handling
 	}
 
-	err = httpsigver-ap.SignRequest(context.Background(), req, reqActorPubKeyId, privateKeyPem.String())
+	err = httpsigver.SignRequest(context.Background(), req, reqActorPubKeyId, privateKeyPem.String())
 	if err != nil {
 		// error handling
 	}
@@ -37,11 +43,15 @@ func main() {
 ```go
 package main
 
-import "github.com/MatejLach/httpsigver-ap"
+import (
+	//...
+	
+	"github.com/MatejLach/httpsigver-ap"
+)
 
 func main() {
 	// ...
-	validSignature, err := httpsigver-ap.ReqHasValidSignature(context.Background(), req, "", true)
+	validSignature, err := httpsigver.ReqHasValidSignature(context.Background(), req, "", true)
 	if err != nil { 
 		// error handling
 	}
